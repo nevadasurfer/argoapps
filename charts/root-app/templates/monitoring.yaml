@@ -2,6 +2,12 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: monitoring-stack
+<<<<<<< HEAD
+=======
+  namespace: argocd  # Or whatever namespace Argo CD runs in
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+>>>>>>> 91a61631dd6dadbd6ee0b74b7f08587017945b74
 spec:
   project: default
   source:
