@@ -9,7 +9,7 @@ spec:
   source:
     repoURL: https://grafana.github.io/helm-charts
     chart: kube-prometheus-stack
-    targetRevision: 59.0.0  # Pick a stable version
+    #targetRevision: 59.0.0  # Pick a stable version
     helm:
       values: |
         grafana:
