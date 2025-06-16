@@ -2,14 +2,12 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: monitoring-stack
-  finalizers:
-    - resources-finalizer.argocd.argoproj.io
 spec:
   project: default
   source:
-    repoURL: https://grafana.github.io/helm-charts
+    repoURL: https://prometheus-community.github.io/helm-charts
     chart: kube-prometheus-stack
-    #targetRevision: 59.0.0  # Pick a stable version
+    targetRevision: "74.2.1"
     helm:
       values: |
         grafana:
